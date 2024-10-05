@@ -41,7 +41,7 @@ const Loginuser = () => {
                         {error && <p className="error">{error}</p>} {/* Display error message */}
                         <form onSubmit={handleLogin}>
                             <div>
-                                <label>Email: </label>
+                                <label>Email Address: </label>
                                 <input
                                     type="email"
                                     value={email}
