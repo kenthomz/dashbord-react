@@ -1,0 +1,45 @@
+@import '_global';  
+
+.login_item {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    width: 100%;
+    background: $background-color; /* Use your primary color */
+        
+    h2 {
+        color: $text-color; /* Use your secondary color */
+    }
+
+    .login_fields{
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        label{display: block;}
+        input {  
+            width: 100%; /* Make the input take the full width of its container */
+            padding: 1.1em; /* Add some padding for better aesthetics */
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 4px; /* Optional: rounded corners */
+            box-sizing: border-box; /* Include padding and border in the element's total width */
+            margin:1rem 0;
+        }
+        button {
+            width: 100%; /* Make the button take the full width of its container */
+            padding: 1.2rem; /* Add padding for better aesthetics */
+            background-color: $primary-color; /* Set your desired background color (Bootstrap primary blue) */
+            color: white; /* Set text color to white */
+            border: none; /* Remove default border */
+            border-radius: 4px; /* Optional: rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+            margin-top: 1rem;
+        }
+        .login_item .container button:hover {
+            background-color: #0056b3; /* Darker shade for hover effect */
+        }
+    }
+
+}

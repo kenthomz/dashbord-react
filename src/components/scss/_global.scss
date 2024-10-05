@@ -1,0 +1,275 @@
+// Global Variables
+
+// Colors
+$primary-color: #3498db; // Change this to your primary color
+$secondary-color: #2ecc71; // Change this to your secondary color
+$accent-color: #e74c3c; // Change this to your accent color
+$text-color: #333333; // Main text color
+$background-color: #f9f9f9; // Background color
+$border-color: #dddddd; // Border color
+
+// Fonts
+$font-family-base: 'Helvetica Neue', Arial, sans-serif; // Base font family
+$font-size-base: 16px; // Base font size
+$font-weight-normal: 400; // Normal font weight
+$font-weight-bold: 700; // Bold font weight
+
+// Global Styles
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  color: $text-color;
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  color: $primary-color;
+  font-weight: $font-weight-bold;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+// Links
+a {
+  color: $primary-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent-color;
+    text-decoration: underline;
+  }
+}
+
+// Buttons
+.btn {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-weight: $font-weight-bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary-color;
+  }
+}
+
+// Utility Classes
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+// Flexbox Utilities
+.flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row; // Default flex direction
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+// Align Items
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+// Justify Content
+.justify-content-start {
+  justify-content: flex-start;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+// Container
+.container {
+  width: 100%;
+  max-width: 1200px; // Change this to your desired max width
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+// Row
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px; // Adjust for padding
+  margin-right: -15px; // Adjust for padding
+}
+
+// Column Styles
+.col {
+  padding-left: 15px;
+  padding-right: 15px;
+  flex: 0 0 50%;
+
+  // Default column width
+  width: 100%; // Full width by default
+
+  // Responsive widths
+  @media (min-width: 576px) {
+    flex: 0 0 50%; // 50% width on small screens
+    width: 50%; // 50% width on small screens
+  }
+
+  @media (min-width: 768px) {
+    flex: 0 0 33.33%; // 33.33% width on medium screens
+    width: 33.33%; // 33.33% width on medium screens
+  }
+
+  @media (min-width: 992px) {
+    flex: 0 0 25%; // 25% width on large screens
+    width: 25%; // 25% width on large screens
+  }
+
+  @media (min-width: 1200px) {
+    flex: 0 0 40%; // 20% width on extra large screens
+    width: 20%; // 20% width on extra large screens
+  }
+
+  // Additional column sizes
+  &.col-1 {
+    @media (min-width: 576px) {
+      width: 8.33%; // 1/12 width
+    }
+  }
+  
+  &.col-2 {
+    @media (min-width: 576px) {
+      width: 16.67%; // 2/12 width
+    }
+  }
+  
+  &.col-3 {
+    @media (min-width: 576px) {
+      width: 25%; // 3/12 width
+    }
+  }
+
+  &.col-4 {
+    @media (min-width: 576px) {
+      width: 33.33%; // 4/12 width
+    }
+  }
+
+  &.col-5 {
+    @media (min-width: 576px) {
+      width: 41.67%; // 5/12 width
+    }
+  }
+
+  &.col-6 {
+    @media (min-width: 576px) {
+      width: 50%; // 6/12 width
+    }
+  }
+
+  &.col-7 {
+    @media (min-width: 576px) {
+      width: 58.33%; // 7/12 width
+    }
+  }
+
+  &.col-8 {
+    @media (min-width: 576px) {
+      width: 66.67%; // 8/12 width
+    }
+  }
+
+  &.col-9 {
+    @media (min-width: 576px) {
+      width: 75%; // 9/12 width
+    }
+  }
+
+  &.col-10 {
+    @media (min-width: 576px) {
+      width: 83.33%; // 10/12 width
+    }
+  }
+
+  &.col-11 {
+    @media (min-width: 576px) {
+      width: 91.67%; // 11/12 width
+    }
+  }
+
+  &.col-12 {
+    @media (min-width: 576px) {
+      width: 100%; // 12/12 width
+    }
+  }
+}
