@@ -1,0 +1,81 @@
+.header {
+    width: calc(100% - 250px); // Account for the sidebar width
+    margin-left: 250px; // Offset header by the width of the sidebar
+    color: #ecf0f1;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    box-sizing: border-box; // Ensure padding is included within the element's width
+    overflow: hidden; // Prevent content overflow
+    z-index: 1;
+  
+    .welcome-message {
+      font-size: 18px;
+      color: #000;
+    }
+  
+    .hamburger {
+      display: block;
+      background: none;
+      border: none;
+      color: #000;
+      font-size: 24px;
+      cursor: pointer;
+  
+      @media (min-width: 769px) {
+        display: none;
+      }
+    }
+  
+    .right-section {
+      display: flex;
+      align-items: center;
+  
+      .search-container {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+  
+        .search-label {
+          margin-right: 10px;
+          font-size: 16px;
+          color: #000;
+        }
+  
+        .search-bar {
+          input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #000;
+            color: #fff;
+          }
+        }
+      }
+  
+      .profile-container {
+        display: flex;
+        align-items: center;
+  
+        .profile-label {
+          margin-right: 10px;
+          font-size: 16px;
+          color: #000;
+        }
+  
+        .user-profile {
+          display: flex;
+          align-items: center;
+          color: #000;
+  
+          img {
+            border-radius: 50%;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+  
