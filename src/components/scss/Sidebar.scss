@@ -1,0 +1,43 @@
+.sidebar {
+    background-color: #1F1E30;
+    color: #ecf0f1;
+    width: 250px;
+    height: 100vh; // Full viewport height, no margin pushing it down
+    position: fixed;
+    top: 0; // Stick to the top
+    left: 0;
+    padding-top: 20px;
+    transition: transform 0.3s ease;
+    z-index: 100;
+    border-radius: 0; // Removed the border-radius to fit flush against the edges
+    overflow: hidden; // Ensure there's no overflow
+    
+    &.open {
+      transform: translateX(0);
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      li {
+        padding: 15px;
+        cursor: pointer;
+        font-size: 18px;
+        
+        &:hover {
+          background-color: #34495e;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      transform: translateX(-250px); // Hide sidebar on mobile
+      
+      &.open {
+        transform: translateX(0); // Slide sidebar in when open
+      }
+    }
+  }
+  
