@@ -2,14 +2,15 @@
     width: calc(100% - 250px); // Account for the sidebar width
     margin-left: 250px; // Offset header by the width of the sidebar
     color: #ecf0f1;
-    padding: 10px 20px;
+    padding:  20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: auto;
     box-sizing: border-box; // Ensure padding is included within the element's width
     overflow: hidden; // Prevent content overflow
     z-index: 1;
+    background-color: #fff;
   
     .welcome-message {
       font-size: 18px;
