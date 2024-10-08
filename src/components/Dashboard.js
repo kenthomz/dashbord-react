@@ -3,11 +3,8 @@ import './scss/_dashboard.scss';
 import './scss/_global.scss';
 import Sidebar from './Sidebar';
 import Header from './Header';
-import {
-  CircularProgressbar,
-  CircularProgressbarWithChildren,
-  buildStyles,
-} from 'react-circular-progressbar';
+import SalesLineGraph from './SalesLineGraph';
+import { CircularProgressbar, CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
 function Dashboard() {
@@ -20,8 +17,7 @@ function Dashboard() {
   // Invoice statistics
   const totalInvoices = 1135;
   const paidPercentage = 50; // For #4B58D2
-  const overduePercentage = 27; // For #18222C
-  const unpaidPercentage = 20; // For #E2EBF2
+
 
   return (
     <div className="dashboard">
@@ -52,59 +48,65 @@ function Dashboard() {
 
           {/* Cards second section */}
           <div className="statics">
-            <div className="row">
-              <div className="col col-5 invoice-stats">
-                <div className="row">
-                <div className="invoice-details col col-3">
-  <div className="stat">
-    <h4>Total Paid</h4>
-    <p>$40,000</p>
-  </div>
-  <div className="stat">
-    <h4>Total Overdue</h4>
-    <p>$5,000</p>
-  </div>
-  <div className="stat">
-    <h4>Total Unpaid</h4>
-    <p>$10,000</p>
-  </div>
-                  </div>
+            <div className="row justify-content-between">
+              <div className="col col-10 invoice-stats">
+                <h2>Invoice Statics</h2>
+                <div className="row align-items-center">
+                  {/* circle graph */}
                   <div className="circle-graph col col-3">
-                  <CircularProgressbarWithChildren
-                  value={80} // Set to 100 for full circle
-                  styles={buildStyles({
-                    pathColor: "#000", // Background circle color
-                    trailColor: "#eee", // Background trail color
-                    strokeLinecap: "butt",
-                  })}
-                >
-                  <div style={{ position: 'relative', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
-                    <CircularProgressbar
-                      value={40}
+                    <CircularProgressbarWithChildren
+                      value={80} // Set to 100 for full circle
                       styles={buildStyles({
-                        pathColor: "#4B58D2", // Path color for 40%
-                        trailColor: "#eee", // Trail color for 40%
+                        pathColor: "#000", // Background circle color
+                        trailColor: "#eee", // Background trail color
                         strokeLinecap: "butt",
+                        strokeWidth: 20,  // Adjust the thickness of the outer circle
                       })}
-                    />
+                    >
+                      <div style={{ position: 'relative', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+                        <CircularProgressbar
+                          value={paidPercentage}
+                          styles={buildStyles({
+                            pathColor: "#4B58D2", // Path color for 40%
+                            trailColor: "transparent", // Trail color for 40%
+                            strokeLinecap: "butt",
+                            strokeWidth: 30,
+                          })}
+                        />
+                      </div>
+                      <div className="invoices" style={{ fontSize: '20px', color: '#000', marginTop: '10px' }}>
+                        {totalInvoices} invoices
+                      </div>
+                    </CircularProgressbarWithChildren>
                   </div>
-                  <div className="invoices" style={{ fontSize: '20px', color: '#000', marginTop: '10px' }}>
-                    {totalInvoices} invoices
+                  {/* end circle graph */}
+                  <div className="invoice-details col col-3">
+                    <div className="stat">
+                      <h4>Total Paid</h4>
+                      <p>$40,000</p>
+                    </div>
+                    <div className="stat">
+                      <h4>Total Overdue</h4>
+                      <p>$5,000</p>
+                    </div>
+                    <div className="stat">
+                      <h4>Total Unpaid</h4>
+                      <p>$10,000</p>
+                    </div>
                   </div>
-                </CircularProgressbarWithChildren>
-
-
-                  </div>
-
                 </div>
               </div>
 
-              <div className="col col-7">
-                {/* Additional content can go here */}
+              <div className="col col-12 sales-statics">
+                <SalesLineGraph />
               </div>
             </div>
           </div>
           {/* End second section */}
+
+          {/* Data tables section */}
+
+          {/* End Data tables section */}
         </div>
       </div>
     </div>

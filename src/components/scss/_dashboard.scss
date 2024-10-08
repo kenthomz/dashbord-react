@@ -73,30 +73,32 @@
 // _dashboard.scss
 
 .statics {
-  background-color: #fff;
   margin: 2rem 0;
   padding: 2rem;
 
-  .invoice-details {
-    display: flex;
-    flex-direction: column;  // Stack items vertically
-    gap: 10px;
+  .invoice-stats{
+    background-color: #fff;
+    padding: 1rem;
+      .invoice-details {
+        display: flex;
+        flex-direction: column;  // Stack items vertically
+        gap: 10px;
 
-    .stat {
-      h4 {
-        font-size: 16px;
-        color: #505057;
-        margin-bottom: 5px;
+        .stat {
+          h4 {
+            font-size: 16px;
+            color: #505057;
+            margin-bottom: 5px;
+          }
+
+          p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #505057;
+          }
+        }
       }
-
-      p {
-        font-size: 20px;
-        font-weight: bold;
-        color: #505057;
-      }
-    }
-  }
-
+}
   .circle-graph {
     display: flex;
     justify-content: center;
@@ -114,8 +116,10 @@
     }
   }
 
-  .row {
-    display: flex; // Ensure that the row displays flex properties
-    align-items: center; // Center the columns vertically
+  
+  .sales-statics{
+    background-color: #fff;
+    padding: 1rem;
   }
 }
+
