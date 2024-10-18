@@ -33,10 +33,10 @@ const Loginuser = () => {
         <section className="login_item">
             <div className="container">
                 <div className="row justify-content-around">
-                    <div className="col col-4 login_bg">
+                    <div className="col col-5 login_bg">
                         <img src={`${process.env.PUBLIC_URL}/login-bg.jpg`} alt="From Public" style={{ width: '100%', height: 'auto' }} />
                     </div>
-                    <div className="col col-4 login_fields">
+                    <div className="col col-5 login_fields">
                         <h2>Login</h2>
                         {error && <p className="error">{error}</p>} {/* Display error message */}
                         <form onSubmit={handleLogin}>
@@ -60,7 +60,7 @@ const Loginuser = () => {
                             </div>
                             <button type="submit">Login</button>
                         </form>
-                        <p>
+                        <p class="mt-4">
                             Don't have an account? <a href="/register">Register here</a>
                         </p>
                     </div>
