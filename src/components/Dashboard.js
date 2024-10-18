@@ -49,11 +49,11 @@ function Dashboard() {
           {/* Cards second section */}
           <div className="statics">
             <div className="row justify-content-between">
-              <div className="col col-10 invoice-stats">
+              <div className="col col-5 invoice-stats">
                 <h2>Invoice Statics</h2>
                 <div className="row align-items-center">
                   {/* circle graph */}
-                  <div className="circle-graph col col-3">
+                  <div className="circle-graph col col-5">
                     <CircularProgressbarWithChildren
                       value={80} // Set to 100 for full circle
                       styles={buildStyles({
@@ -97,7 +97,7 @@ function Dashboard() {
                 </div>
               </div>
 
-              <div className="col col-12 sales-statics">
+              <div className="col col-5 sales-statics">
                 <SalesLineGraph />
               </div>
             </div>
